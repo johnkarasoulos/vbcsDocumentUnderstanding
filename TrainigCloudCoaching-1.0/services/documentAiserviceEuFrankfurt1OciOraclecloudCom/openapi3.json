@@ -1,0 +1,172 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Document Aiservice Eu Frankfurt 1 Oci Oraclecloud Com",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://document.aiservice.eu-frankfurt-1.oci.oraclecloud.com",
+            "description": "Document Aiservice Eu Frankfurt 1 Oci Oraclecloud Com",
+            "x-vb": {
+                "authentication": {
+                    "authenticated": {
+                        "type": "http_signature_oci",
+                        "credentials": "vb_79118612-390e-494b-a924-cfaf2e22d10b"
+                    },
+                    "anonymous": {
+                        "type": "http_signature_oci",
+                        "credentials": "vb_9179fa3a-85e4-41ed-b405-7ba19bfd5c82"
+                    }
+                },
+                "anonymousAccess": true
+            }
+        }
+    ],
+    "paths": {
+        "/20221109/processorJobs": {
+            "post": {
+                "operationId": "post20221109",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Post20221109ProcessorJobsResponse"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/post20221109/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "create"
+                },
+                "requestBody": {
+                    "content": {
+                        "application/octet-stream": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Post20221109ProcessorJobsRequest"
+                            }
+                        },
+                        "application/json": {}
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Post20221109ProcessorJobsRequest": {
+                "type": "string",
+                "format": "binary"
+            },
+            "Post20221109ProcessorJobsResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "compartmentId": {
+                        "type": "string"
+                    },
+                    "displayName": {
+                        "nullable": true
+                    },
+                    "features": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "featureType": {
+                                    "type": "string"
+                                },
+                                "modelId": {
+                                    "nullable": true
+                                },
+                                "tenancyId": {
+                                    "nullable": true
+                                },
+                                "maxResults": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "language": {
+                        "nullable": true
+                    },
+                    "documentType": {
+                        "nullable": true
+                    },
+                    "inputLocation": {
+                        "type": "object",
+                        "properties": {
+                            "sourceType": {
+                                "type": "string"
+                            },
+                            "objectLocations": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "namespaceName": {
+                                            "type": "string"
+                                        },
+                                        "bucketName": {
+                                            "type": "string"
+                                        },
+                                        "objectName": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "timeAccepted": {
+                        "type": "string"
+                    },
+                    "timeStarted": {
+                        "type": "string"
+                    },
+                    "timeFinished": {
+                        "type": "string"
+                    },
+                    "percentComplete": {
+                        "type": "integer"
+                    },
+                    "outputLocation": {
+                        "type": "object",
+                        "properties": {
+                            "namespaceName": {
+                                "type": "string"
+                            },
+                            "bucketName": {
+                                "type": "string"
+                            },
+                            "prefix": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "lifecycleState": {
+                        "type": "string"
+                    },
+                    "isZipOutputEnabled": {
+                        "type": "boolean"
+                    },
+                    "lifecycleDetails": {
+                        "nullable": true
+                    }
+                }
+            }
+        }
+    }
+}

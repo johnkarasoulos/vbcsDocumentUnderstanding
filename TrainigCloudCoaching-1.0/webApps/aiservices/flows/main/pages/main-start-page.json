@@ -1,0 +1,152 @@
+{
+  "title": "main",
+  "description": "",
+  "variables": {
+    "birthDate": {
+      "type": "string"
+    },
+    "bucketName": {
+      "type": "string"
+    },
+    "compartmentId": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "documentNumber": {
+      "type": "string"
+    },
+    "documentType": {
+      "type": "string"
+    },
+    "documentTypeLetter": {
+      "type": "string"
+    },
+    "expiryDate": {
+      "type": "string"
+    },
+    "featureType": {
+      "type": "string",
+      "defaultValue": "KEY_VALUE_EXTRACTION"
+    },
+    "featureType2": {
+      "type": "string",
+      "defaultValue": "DOCUMENT_CLASSIFICATION"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "holdImage": {
+      "type": "any"
+    },
+    "imageURL": {
+      "type": "string"
+    },
+    "inputName": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "maxResults": {
+      "type": "number"
+    },
+    "namespaceName": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "processType": {
+      "type": "string",
+      "defaultValue": "GENERAL"
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getJobResultsObject": {
+      "endpoint": "getJobResultsObject",
+      "service": "objectstorageEuFrankfurt1OraclecloudCom",
+      "path": "response"
+    },
+    "getJobResultsObject": {
+      "pages": [
+        {
+          "detectedDocumentTypes": [
+            {
+              "documentType": "string"
+            }
+          ],
+          "documentFields": [
+            {
+              "fieldLabel": {
+                "confidence": "number",
+                "name": "string"
+              },
+              "fieldName": "any",
+              "fieldType": "string",
+              "fieldValue": {
+                "boundingPolygon": "any",
+                "confidence": "any",
+                "text": "any",
+                "value": "string",
+                "valueType": "string",
+                "wordIndexes": "any"
+              }
+            }
+          ],
+          "pageNumber": "number"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "filePickerSelect": {
+      "chains": [
+        {
+          "chain": "FilePickerSelectChain",
+          "parameters": {
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]"
+          }
+        }
+      ]
+    },
+
+    "toggleDrawer": {
+      "chains": [
+        {
+          "chainId": "application:toggleDrawerHandler"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-file-picker": {
+        "path": "ojs/ojfilepicker"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      }
+
+    },
+    "modules": {
+      "ojValidationDateTime": {
+        "path": "ojs/ojvalidation-datetime"
+      }
+    }
+  },
+  "security": {
+    "access": {
+      "requiresAuthentication": false
+    }
+  }
+}

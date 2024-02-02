@@ -1,0 +1,42 @@
+{
+    "id": "ocid1.aidocumentprocessorjob.oc1.eu-frankfurt-1.amaaaaaauevftmqa6io2qpnh2y6jyysv4dqsplqkwpy6lvvpfro33jflqqya",
+    "compartmentId": "ocid1.compartment.oc1..aaaaaaaa4x57dds5pvm5v4qnkukiqxpnasxsadyv5xi6nvoewjyh5sh75h7q",
+    "displayName": null,
+    "features": [
+        {
+            "featureType": "KEY_VALUE_EXTRACTION",
+            "modelId": null,
+            "tenancyId": null
+        },
+        {
+            "featureType": "DOCUMENT_CLASSIFICATION",
+            "maxResults": 1,
+            "modelId": null,
+            "tenancyId": null
+        }
+    ],
+    "language": null,
+    "documentType": null,
+    "inputLocation": {
+        "sourceType": "OBJECT_STORAGE_LOCATIONS",
+        "objectLocations": [
+            {
+                "namespaceName": "frsxwtjslf35",
+                "bucketName": "vbcsBucket",
+                "objectName": "passport-sample.png"
+            }
+        ]
+    },
+    "timeAccepted": "2024-01-24T12:25:41.604Z",
+    "timeStarted": "2024-01-24T12:25:41.604Z",
+    "timeFinished": "2024-01-24T12:25:41.604Z",
+    "percentComplete": 100,
+    "outputLocation": {
+        "namespaceName": "frsxwtjslf35",
+        "bucketName": "vbcsBucket",
+        "prefix": "result"
+    },
+    "lifecycleState": "SUCCEEDED",
+    "isZipOutputEnabled": false,
+    "lifecycleDetails": null
+}

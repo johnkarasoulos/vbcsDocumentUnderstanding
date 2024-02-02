@@ -1,0 +1,182 @@
+{
+    "documentMetadata": {
+        "pageCount": 1,
+        "mimeType": "image/png"
+    },
+    "pages": [
+        {
+            "pageNumber": 1,
+            "dimensions": null,
+            "detectedDocumentTypes": [
+                {
+                    "documentType": "PASSPORT",
+                    "confidence": 0.99412346
+                }
+            ],
+            "detectedLanguages": null,
+            "words": null,
+            "lines": null,
+            "tables": null,
+            "documentFields": [
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "FirstName",
+                        "confidence": 0.9979309
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "HAPPY"
+                    }
+                },
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "LastName",
+                        "confidence": 0.9979309
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "TRAVELER"
+                    }
+                },
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "Country",
+                        "confidence": 0.9979309
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "USA"
+                    }
+                },
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "Nationality",
+                        "confidence": 0.9998241
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "USA"
+                    }
+                },
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "BirthDate",
+                        "confidence": 0.9998241
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "1965/02/05"
+                    }
+                },
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "ExpiryDate",
+                        "confidence": 0.9998241
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "2030/10/14"
+                    }
+                },
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "Gender",
+                        "confidence": 0.9998241
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "F"
+                    }
+                },
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "DocumentType",
+                        "confidence": 0.9979309
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "P"
+                    }
+                },
+                {
+                    "fieldType": "KEY_VALUE",
+                    "fieldLabel": {
+                        "name": "DocumentNumber",
+                        "confidence": 0.9998241
+                    },
+                    "fieldName": null,
+                    "fieldValue": {
+                        "valueType": "STRING",
+                        "text": null,
+                        "confidence": null,
+                        "boundingPolygon": null,
+                        "wordIndexes": null,
+                        "value": "E00007734"
+                    }
+                }
+            ]
+        }
+    ],
+    "detectedDocumentTypes": [
+        {
+            "documentType": "PASSPORT",
+            "confidence": 0.99412346
+        }
+    ],
+    "detectedLanguages": null,
+    "documentClassificationModelVersion": "1.6.43",
+    "languageClassificationModelVersion": null,
+    "textExtractionModelVersion": null,
+    "keyValueExtractionModelVersion": "3.1.31",
+    "tableExtractionModelVersion": null,
+    "errors": null,
+    "searchablePdf": null
+}

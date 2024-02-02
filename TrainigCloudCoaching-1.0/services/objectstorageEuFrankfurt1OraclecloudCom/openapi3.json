@@ -1,0 +1,295 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Objectstorage Eu Frankfurt 1 Oraclecloud Com",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://objectstorage.eu-frankfurt-1.oraclecloud.com",
+            "description": "Objectstorage Eu Frankfurt 1 Oraclecloud Com",
+            "x-vb": {
+                "authentication": {
+                    "authenticated": {
+                        "type": "http_signature_oci",
+                        "credentials": "vb_969067ed-c913-4f63-981d-0ab8a2b0ed1d"
+                    },
+                    "anonymous": {
+                        "type": "http_signature_oci",
+                        "credentials": "vb_c1c13100-f890-40a8-a361-0b6ead62fd17"
+                    }
+                },
+                "forceProxy": "always",
+                "anonymousAccess": true
+            }
+        }
+    ],
+    "paths": {
+        "/n/{namespaceName}/b/{bucketName}/o/{objectName}": {
+            "parameters": [
+                {
+                    "name": "namespaceName",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "x-vb": {
+                        "defaultValue": "namespace"
+                    }
+                },
+                {
+                    "name": "bucketName",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "x-vb": {
+                        "defaultValue": "abc"
+                    }
+                },
+                {
+                    "name": "objectName",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "x-vb": {
+                        "defaultValue": "abc.txt"
+                    }
+                }
+            ],
+            "put": {
+                "operationId": "putNNamespaceNameBBucketNameOObjectName",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {}
+                    }
+                },
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "create"
+                }
+            }
+        },
+        "/n/{namespaceName}/b/{bucketName}/o/result/{jobId}/{namespace_bucket}/results/{fileName}": {
+            "parameters": [
+                {
+                    "name": "namespaceName",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "bucketName",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "jobId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "namespace_bucket",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "fileName",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "get": {
+                "operationId": "getJobResultsObject",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetNNamespaceNameBBucketNameOResultJobIdNamespace_bucketResultsFileName"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getJobResultsObject/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "getOne",
+                    "queryParameters": {
+                        "httpResponseContentType": "application/json"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "GetNNamespaceNameBBucketNameOResultJobIdNamespace_bucketResultsFileName": {
+                "type": "object",
+                "properties": {
+                    "documentMetadata": {
+                        "type": "object",
+                        "properties": {
+                            "pageCount": {
+                                "type": "integer"
+                            },
+                            "mimeType": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "pages": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "pageNumber": {
+                                    "type": "integer"
+                                },
+                                "dimensions": {
+                                    "nullable": true
+                                },
+                                "detectedDocumentTypes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "documentType": {
+                                                "type": "string"
+                                            },
+                                            "confidence": {
+                                                "type": "number"
+                                            }
+                                        }
+                                    }
+                                },
+                                "detectedLanguages": {
+                                    "nullable": true
+                                },
+                                "words": {
+                                    "nullable": true
+                                },
+                                "lines": {
+                                    "nullable": true
+                                },
+                                "tables": {
+                                    "nullable": true
+                                },
+                                "documentFields": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "fieldType": {
+                                                "type": "string"
+                                            },
+                                            "fieldLabel": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "confidence": {
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            },
+                                            "fieldName": {
+                                                "nullable": true
+                                            },
+                                            "fieldValue": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "valueType": {
+                                                        "type": "string"
+                                                    },
+                                                    "text": {
+                                                        "nullable": true
+                                                    },
+                                                    "confidence": {
+                                                        "nullable": true
+                                                    },
+                                                    "boundingPolygon": {
+                                                        "nullable": true
+                                                    },
+                                                    "wordIndexes": {
+                                                        "nullable": true
+                                                    },
+                                                    "value": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "detectedDocumentTypes": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "documentType": {
+                                    "type": "string"
+                                },
+                                "confidence": {
+                                    "type": "number"
+                                }
+                            }
+                        }
+                    },
+                    "detectedLanguages": {
+                        "nullable": true
+                    },
+                    "documentClassificationModelVersion": {
+                        "type": "string"
+                    },
+                    "languageClassificationModelVersion": {
+                        "nullable": true
+                    },
+                    "textExtractionModelVersion": {
+                        "nullable": true
+                    },
+                    "keyValueExtractionModelVersion": {
+                        "type": "string"
+                    },
+                    "tableExtractionModelVersion": {
+                        "nullable": true
+                    },
+                    "errors": {
+                        "nullable": true
+                    },
+                    "searchablePdf": {
+                        "nullable": true
+                    }
+                }
+            }
+        }
+    }
+}
