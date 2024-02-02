@@ -26,7 +26,9 @@ You should collect and save the following information that will be needed inside
 
 ## URLs
 List of Object Storage API : https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/
+
 List of Document Storage API : https://docs.oracle.com/en-us/iaas/api/#/en/document-understanding/20221109/
+
 Key Value Extraction (Passport) : https://docs.oracle.com/en-us/iaas/Content/document-understanding/using/pretrained_doc_keyvalue_passport.htm#pretrained_doc_keyvalue_passport
 
 
